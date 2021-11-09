@@ -24,8 +24,8 @@ baes_100 = base(100)
 #     return wrap
 
 
-@base_10
-@base_20
+@base(10)
+@base(20)
 @base(100)
 def mysum2(x, y):
     return x + y

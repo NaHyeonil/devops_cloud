@@ -25,22 +25,23 @@ def memoize(fn):
 
     return wrap
 
-    return wrap
 
-
+@memoize
 def mysum2(x, y):
     time.sleep(1)
     return x * y + 10
 
 
-mysum2 = memoize(mysum2)
-# mysum2(1, 2)
+# mysum2 = memoize(mysum2)
 
 
+@memoize
 def mymultiply2(x, y):
     time.sleep(1)
     return x * y + 10
 
+
+# mymultiply2 = memoize(mymultiply2)
 
 # cached2 = {}
 
