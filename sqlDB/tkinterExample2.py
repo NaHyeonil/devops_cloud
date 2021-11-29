@@ -1,20 +1,22 @@
 from tkinter import *
+from tkinter import messagebox
+
+#버튼을 사용하여 알림 창 띄우기
+def clickButtion() :
+    messagebox.showinfo("버튼 클릭", "버튼을 클릭했습니다.") #메세지 버튼 타이틀
 
 #문자를 표현할 수 있는 라벨 사용
 window = Tk()
-window.title("라벨 연습")
-window.geometry("400x100") #넓이 * 높이
+window.title("버튼 이벤트 연습")
+window.geometry("200x200")
 
-#라벨 선언
-label1  = Label(window, text="This is MariaDB를")
-label2  = Label(window, text="열심히", font=("궁서체",30),fg="blue")
-label3  = Label(window, text="공부 중입니다.", bg="magenta",width=20,height=5)
-                #부모 윈도우, 출력될 글, 설정:font, fg=글자색, bg=배경색, anchor는 글자의 위치
+button1 = Button(window, text="요기 눌러요", fg="red", bg="yellow", command=clickButtion)
 
-#위젯 적용
-label1.pack()
-label2.pack()
-label3.pack()
+button1.pack(expand=1)
+
+
+
+
 
 #GUI 화면 코딩
 

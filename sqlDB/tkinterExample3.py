@@ -10,9 +10,13 @@ window = Tk()
 window.title("버튼 이벤트 연습")
 window.geometry("200x200")
 
-button1 = Button(window, text="요기 눌러요", fg="red", bg="yellow", command=clickButtion)
-button1.pack(expend=1)
+button1 = Button(window, text="요기 눌러요1", command=clickButtion)
+button2 = Button(window, text="요기 눌러요2", command=clickButtion)
+button3 = Button(window, text="요기 눌러요3", command=clickButtion)
 
+button1.pack(side=TOP, padx=10, pady=10)
+button2.pack(side=TOP, padx=10, pady=10)
+button3.pack(side=TOP, padx=10, pady=10)
 
 
 
