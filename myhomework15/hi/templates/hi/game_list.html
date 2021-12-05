@@ -1,0 +1,31 @@
+{% extends "hi/layout.html" %}
+
+
+{% block content %}
+
+    <form action="" method="get">
+        <input type="text" name="query" value="{{ request.GET.query }}" />
+        <input type="submit" value="검색" />
+    </form>
+
+    <table class = "table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>gamename</th>
+                <th>gold</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in game_list %}
+                <tr>
+                    <td>
+                        <a href="/hi/{{ game.pk }}">
+                            {% game.gamename %}
+                        </a>
+                    </td>
+                    <td>{% game.gold %}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
