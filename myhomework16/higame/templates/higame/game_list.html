@@ -1,0 +1,20 @@
+{% extends "higame/layout.html" %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>gamename</th>
+                <th>gold</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in game_list %}
+                <tr>
+                    <td>{{ game.gamename }}</td>
+                    <td>{{ game.gold }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

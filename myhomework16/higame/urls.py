@@ -1,4 +1,4 @@
-import . from views
+from . import views
 
 
 urlpatterns = []

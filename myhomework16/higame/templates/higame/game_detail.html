@@ -1,0 +1,16 @@
+{% extends "higame/layout.html" %}
+
+{% block content %}
+    <h2>{{ game.gamename }}</h2>
+
+    <ul>
+        <li>게임명: {{ game.gamename }}</li>
+        <li>게임플레이날짜: {{ game.gamedate }}</li>
+        <li>획득골드: {{ game.gold }}</li>
+    </ul>
+
+    {{ higame.singularity|linebreaks }}
+
+    <hr/>
+    <a href="/higame/" class="btn-primary">목록으로</a>
+{% endblock %}

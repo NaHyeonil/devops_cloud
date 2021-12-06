@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from higame.models import Game
+
+
+@admin.register(Game)
+class GameAdmin(admin.ModelAdmin):
+    pass
