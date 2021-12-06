@@ -3,13 +3,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from higame.views import game_list, game_detail
+from higame.views import game_list, game_detail, game_new
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('higame/', include('higame.urls')),
     path('higame/', game_list),
-    path('higame/<int:pk>/', game_detail)
+    path('higame/<int:pk>/', game_detail),
+    path('higame/new', game_new),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,
