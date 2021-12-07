@@ -20,10 +20,10 @@
                 <tr>
                     <td>
                         <a href="/hi/{{ game.pk }}">
-                            {% game.gamename %}
+                            {{ game.gamename }}
                         </a>
                     </td>
-                    <td>{% game.gold %}</td>
+                    <td>{{ game.gold }}</td>
                 </tr>
             {% endfor %}
         </tbody>

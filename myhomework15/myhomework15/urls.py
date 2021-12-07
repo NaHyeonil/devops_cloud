@@ -6,7 +6,7 @@ from hi.views import game_list, game_detail, game_new
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hi/',game_list),
+    path('hi/', game_list),
     path('hi/<int:pk>/', game_detail),
     path('hi/new', game_new),
 ]

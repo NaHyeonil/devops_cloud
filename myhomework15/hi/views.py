@@ -9,9 +9,9 @@ from hi.models import Game
 def game_list(request: HttpRequest) -> HttpResponse:
     qs = Game.objects.all()
 
-    query = request.GET.get("query","")
+    query = request.GET.get("query", "")
     if query:
-        qs = qs.filter(name__icontains=query)
+        qs = qs.filter(gamename__icontains=query)
 
     context_data = {
         "game_list": qs,

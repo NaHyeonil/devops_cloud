@@ -1,12 +1,12 @@
 {% extends "hi/layout.html" %}
 
 {% block content %}
-    <h2>{{ hi.gamename }}</h2>
+    <h2>{{ game.gamename }}</h2>
 
     <ul>
-        <li>게임명: {{ hi.gamename }}</li>
-        <li>게임플레이날짜: {{ hi.gamedate }}</li>
-        <li>획득골드: {{ hi.gold }}</li>
+        <li>게임명: {{ game.gamename }}</li>
+        <li>게임플레이날짜: {{ game.gamedate }}</li>
+        <li>획득골드: {{ game.gold }}</li>
     </ul>
 
     {{ hi.singularity|linebreaks }}
