@@ -1,6 +1,12 @@
 {% extends "diary/layout.html" %}
 
 {% block content %}
+
+    <form action="" method="get">
+        <input type="text" name="query"{{ requset.GET.query }} />
+        <input type="submit" value="검색">
+    </form>
+
     <ul>
         {% for post in post_list %}
             <li>
