@@ -6,7 +6,9 @@
     <div>
         {% for post in post_list %}
             <div>
-                {{ post.title }}
+                <a href="{% url "diary:post_detail" post.pk %}">
+                    {{ post.title }}
+                </a>
             </div>
         {% endfor %}
     </div>
