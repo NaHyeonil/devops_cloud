@@ -1,0 +1,21 @@
+{% extends "story/layout.html" %}
+
+
+{% block content %}
+
+    <form action="" method="get">
+        <input type="text" name="query" />
+        <input type="submit" value="검색">
+    </form>
+
+    <ul>
+        {% for daily in daily_list %}
+            <li>
+                <a href="{% url "story:daily_detail" daily.pk %}">
+                    {{ daily.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

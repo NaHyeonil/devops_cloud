@@ -1,0 +1,35 @@
+{% extends "story/layout.html" %}
+
+{% block content %}
+    <h2>{{ daily.title }}</h2>
+
+    <p>
+        태그:
+        {% for tag in tag_list %}
+            <span class="badge bg-success">
+                {{ tag.name }}
+            </span>
+
+        {% endfor %}
+    </p>
+
+    {{ daily.content|linebreaks }}
+
+    <h3>댓글</h3>
+
+    <ul>
+        {% for comment in comment_list %}
+            <li>
+                {{ comment.message }}
+                by {{ comment.author_name }}
+                at {{ comment.created_at }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <hr/>
+    <a href="{% url "story:daily_list" %}">
+        다른일기 보러가기
+    </a>
+
+{% endblock %}
