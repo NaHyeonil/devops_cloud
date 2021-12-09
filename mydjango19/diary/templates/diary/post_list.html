@@ -1,10 +1,11 @@
 {% extends "diary/layout.html" %}
 
 {% block content %}
-
     <form action="" method="get">
-        <input type="text" name="query"{{ requset.GET.query }}
-        placeholder="검색어를 입력해주세요."/>
+        <input type="text"
+               name="query"
+               value="{{ request.GET.query }}"
+               placeholder="검색어를 입력해주세요." />
         <input type="submit" value="검색" />
     </form>
 
@@ -19,11 +20,15 @@
                         <h5 class="card-title">{{ post.title }}</h5>
                         {{ post.content|truncatewords:20 }}
                         <a href="{% url "diary:post_detail" post.pk %}" class="btn btn-sm btn-primary">
-                            바로가기
+                            바로 가기
                         </a>
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
+    <hr/>
+    <a href="{% url "diary:post_new" %}" class="btn btn-primary">
+        포스팅 쓰기
+    </a>
 {% endblock %}
