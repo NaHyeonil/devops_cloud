@@ -12,6 +12,12 @@ class TimestampedModel(models.Model):
 class Category(TimestampedModel):
     name = models.CharField(max_length=100, unique=True)
 
+    def __str__(self) -> str:
+        return self.name
+
+    class Meta:
+        ordering = ["-id"]
+
 
 class Shop(TimestampedModel):
     # category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -24,6 +30,18 @@ class Shop(TimestampedModel):
                                  help_text="입력예) 042-1234-1234")
     tag_set = models.ManyToManyField('Tag', blank=True)
 
+    def __str__(self) -> str:
+        return self.name
+
+    class Meta:
+        ordering = ["-id"]
+
 
 class Tag(TimestampedModel):
     name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self) -> str:
+        return self.name
+
+    class Meta:
+        ordering = ["name"]
