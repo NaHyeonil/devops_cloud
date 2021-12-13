@@ -20,7 +20,7 @@ class Category(TimestampedModel):
 
 
 class Shop(TimestampedModel):
-    # category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, db_index=True)
     description = models.TextField(blank=True)
     telephone = models.CharField(max_length=14,
