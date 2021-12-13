@@ -8,14 +8,16 @@
             <ul>
                 {% for shop in shop_list %}
                     <li>
-                        {{ shop.name }}
+                        <a href="{% url "shop:shop_detail" shop.pk %}">
+                            {{ shop.name }}
+                        </a>
                     </li>
                 {% endfor %}
             </ul>
         </div>
         <div class="col-sm-4">
             <div class="d-grid mb-3">
-            <a href="{% url "shop:shop_new" %}" class="btn btn-primary">새 포스팅쓰기</a>
+                <a href="{% url "shop:shop_new" %}" class="btn btn-primary">새 포스팅 쓰기</a>
             </div>
 
             <form action="" method="get" class="mb-3">
@@ -25,6 +27,7 @@
                        value="{{ request.GET.query }}"/>
                 <input type="submit" value="검색"/>
             </form>
+
             <ul>
                 <li>
                     <a href="?category_id=">
