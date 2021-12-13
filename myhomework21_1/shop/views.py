@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+
+from shop.forms import ShopForm
+from shop.models import Shop, Category, Tag
 
 def shop_list(request: HttpRequest) -> HttpResponse:
     category_qs = Category.objects.all()
