@@ -10,9 +10,8 @@ const animal_names = [
     "wolf",
 ];
 
-// TODO: 현재 timestamp
 begin_timestamp = new Date().getTime();
-// TODO: shuffle
+
 function shuffle(animal_names) {
     for (let index = animal_names.length - 1; index > 0; index--) {
         const randomPosition = Math.floor(Math.random() * (index + 1));
@@ -20,23 +19,28 @@ function shuffle(animal_names) {
         animal_names[randomPosition] = temporary;
     }
 }
-// TODO: slicing
 
-// TODO: input 받기
-//   readline-sync 라이브러리를 설치
-//   소스코드가 있는 폴더까지 이동해서 !!!
-//   npm install readline-sync
+shuffle(animal_names);
 
+let success_counter = 0;
 
-const { question } = require("readline-sync");
+const random_name = animal_names.slice(0, 5);
 
-
+for (i = 0; i < random_name.length; i++) {
+    console.log(random_name[i]);
+    const { question } = require("readline-sync");
+    const name = question(">>> ")
+    if (name == random_name[i]) {
+        success_counter += 1;
+        console.log("정답!")
+    } else {
+        console.log("실패!")
+    }
+}
 
 end_timestamp = new Date().getTime();
 
-timestamp = end_timestamp - begin_timestamp
-// string
+timestamp = (end_timestamp - begin_timestamp) / 1000
 
-const number = question("Enter a number : ");
-console.log(number);
-console.log(`총${timestamp}초가 걸리셨어요`)
+console.log(`${success_counter}번 성공`)
+console.log(`총${timestamp}초 소요`)
