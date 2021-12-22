@@ -30,4 +30,4 @@ main();
 //     }
 // })
 
-console.log("ENDED")
+console.log("ENDED");

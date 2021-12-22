@@ -1,3 +1,27 @@
+const numbers = [1, 2, 3, 4, 5]; // [31, 89, 24, 81, 46];
+
+// Array의 sort
+function make_random_value(number1, number2) {
+    return Math.random();
+}
+
+const number1 = numbers.map(
+    (number) => ({ number, 기준값: Math.random() }),
+);
+
+const number2 = number1.sort(
+    (value1, value2) => {
+        return value1.기준값 - value2.기준값;
+    }
+);
+
+const number3 = number2.map(
+    (value) => value.number
+);
+
+console.log(new_numbers);
+
+
 const animal_names = [
     "cat",
     "dog",
