@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Elena",
+    "role": "CEO",
+    "facebookurl": "https://facebook.com/",
+    "email": "Elena@Elena.com"
+  },
+  {
+    "name": "Cristina",
+    "role": "CTO",
+    "facebookurl": "https://facebook.com/",
+    "email": "Cristina@Cristina.com"
+  },
+  {
+    "name": "Lucas",
+    "role": "CCO",
+    "facebookurl": "https://facebook.com/",
+    "email": "Lucas@Lucas.com"
+  },
+  {
+    "name": "Jacob",
+    "role": "CFO",
+    "facebookurl": "https://facebook.com/",
+    "email": "Jacob@Jacob.com"
+  }
+]
