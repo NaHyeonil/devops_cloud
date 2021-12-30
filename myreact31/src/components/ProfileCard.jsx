@@ -1,5 +1,5 @@
 import './ProfileCard.css';
-// import ProfileImage from './img/member1.jpg';
+import ProfileImage from '../img/member1.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
@@ -8,14 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
-function ProfileCard({
-  profileImage,
-  name,
-  role,
-  facebookurl,
-  email,
-  setPageName,
-}) {
+function ProfileCard({ name, role, facebookurl, email, setPageName }) {
   return (
     <section>
       <nav className="menu">
@@ -27,7 +20,7 @@ function ProfileCard({
         </a>
       </nav>
       <article className="profile">
-        <img src={profileImage} alt="프로필 이미지" />
+        <img src={ProfileImage} alt="프로필 이미지" />
         <h1>{name}</h1>
         <h2>{role}</h2>
         <a href="#" class="btnView">
@@ -52,10 +45,11 @@ function ProfileCard({
         </li>
       </ul>
       <nav className="others">
-        <a className="on" onClick={() => setPageName('member1')}></a>
-        <a className="on" onClick={() => setPageName('member2')}></a>
-        <a className="on" onClick={() => setPageName('member3')}></a>
-        <a className="on" onClick={() => setPageName('member4')}></a>
+        <a className="on" onClick={() => setPageName('Elena')}></a>
+        <a className="on" onClick={() => setPageName('Cristina')}></a>
+        <a className="on" onClick={() => setPageName('Lucas')}></a>
+        <a className="on" onClick={() => setPageName('Jacob')}></a>
+        <a className="on" onClick={() => setPageName('Jacob123')}></a>
       </nav>
     </section>
   );

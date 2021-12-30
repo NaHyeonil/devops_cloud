@@ -168,6 +168,7 @@ section nav.others a.on {
 /* member1 */
 div.member1 {
   background-color: #ebfaff;
+  padding: 50px;
 }
 div.member1 section article.profile img {
   box-shadow: 5px 15px 30px rgba(173, 216, 230, 0.8);
@@ -179,6 +180,7 @@ div.member1 section a.btnView {
 /* member2 */
 div.member2 {
   background-color: #edffeb;
+  padding: 50px;
 }
 div.member2 section article.profile img {
   box-shadow: 5px 15px 20px #bdccb783;
@@ -190,6 +192,7 @@ div.member2 section a.btnView {
 /* member3 */
 div.member3 {
   background-color: #fff3fd;
+  padding: 50px;
 }
 div.member3 section article.profile img {
   box-shadow: 5px 15px 20px rgba(252, 99, 214, 0.2);
@@ -201,6 +204,7 @@ div.member3 section a.btnView {
 /* member4 */
 div.member4 {
   background-color: #f5f0ff;
+  padding: 50px;
 }
 div.member4 section article.profile img {
   box-shadow: 5px 15px 20px rgba(183, 82, 250, 0.2);
